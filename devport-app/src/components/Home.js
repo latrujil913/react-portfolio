@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 const HomeContainer = styled.div`
-  min-height: 90vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;

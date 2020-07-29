@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 import Home from "./Home";
 import Header from "./Header";
-import styled from "styled-components";
+import HorizontalRule from "./HorizontalRule";
 
 const HeroContainer = styled.div`
   min-height: 100vh;
@@ -13,6 +14,7 @@ class Hero extends Component {
     return (
       <HeroContainer>
         <Header />
+        <HorizontalRule />
         <Home />
       </HeroContainer>
     );

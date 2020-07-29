@@ -2,21 +2,22 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
-  border: 0.5px solid;
-  margin: 1em;
   font-size: 0.9em;
-  height: 2.75em;
-  border: 1px solid #98e342;
+  //   margin: 0em 1em 0em 1em;
+  border: transparent;
   background: transparent;
   color: #98e342;
-  border-radius: 3px;
+  font-family: "Lucida Console", Monaco, monospace;
 `;
 
-const HeaderContainer = styled.div`
+// margin: top right bottom left
+const HeaderContainer = styled.nav`
   display: flex;
-  justify-content: left;
+  justify-content: right;
+  margin: 0em 7em 2em 7em;
+  padding-top: 5em;
 
-  @media (max-width: 500px) {
+  @media (max-width: 750px) {
     justify-content: center;
   }
 `;
@@ -28,6 +29,7 @@ class Header extends Component {
         <Button>About</Button>
         <Button>Resume</Button>
         <Button>Work</Button>
+        <Button>Contact</Button>
       </HeaderContainer>
     );
   }
