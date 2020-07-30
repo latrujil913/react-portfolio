@@ -18,7 +18,7 @@ const HeaderContainer = styled.nav`
 
 const Button = styled.button`
   font-size: 0.9em;
-  margin: 1em 1em 1em 1em;
+  margin: 1em 2vw 1em 2vw;
   border: transparent;
   background: transparent;
   color: #98e342;
