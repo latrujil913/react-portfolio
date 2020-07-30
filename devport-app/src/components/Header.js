@@ -1,35 +1,77 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import logo from "../assets/logo.png";
+
+// margin: top right bottom left
+const HeaderContainer = styled.nav`
+  display: flex;
+  margin: 0em 5vw 0em 5vw;
+  padding-top: 2em;
+  flex-direction: row;
+
+  @media (max-width: 750px) {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+`;
 
 const Button = styled.button`
   font-size: 0.9em;
-  //   margin: 0em 1em 0em 1em;
+  margin: 1em 0vw 1em 0vw;
   border: transparent;
   background: transparent;
   color: #98e342;
   font-family: "Lucida Console", Monaco, monospace;
 `;
 
-// margin: top right bottom left
-const HeaderContainer = styled.nav`
+const LogoContainer = styled.nav`
   display: flex;
-  justify-content: right;
-  margin: 0em 7em 2em 7em;
-  padding-top: 5em;
-
-  @media (max-width: 750px) {
-    justify-content: center;
-  }
+  align-self: center;
 `;
 
+const ButtonContainer = styled.nav`
+  justify-content: right;
+  align-self: center;
+  margin-left: auto;
+
+  // for unsetting the margin-left attribute
+  @media (max-width: 750px) {
+    margin-left: unset;
+  }
+}
+`;
+
+const Logo = styled.img`
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+`;
+
+{
+  /* <a href="https://www.vecteezy.com/free-vector/animal">
+    Animal Vectors by Vecteezy
+</a> */
+}
 class Header extends Component {
   render() {
     return (
       <HeaderContainer>
-        <Button>About</Button>
-        <Button>Resume</Button>
-        <Button>Work</Button>
-        <Button>Contact</Button>
+        <LogoContainer>
+          <Logo src={logo} alt="Logo" />
+        </LogoContainer>
+        <ButtonContainer>
+          <Button
+            onMouseOver={() => {
+              console.log("I found you mouse.");
+            }}
+          >
+            About
+          </Button>
+          <Button>Resume</Button>
+          <Button>Work</Button>
+          <Button>Contact</Button>
+        </ButtonContainer>
       </HeaderContainer>
     );
   }

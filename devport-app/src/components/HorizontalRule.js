@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 // NOTE: margin: top right bottom left
 const HeaderRule = styled.hr`
-  height: 1.5px;
+  height: 1px;
   background: white;
   border: none;
   outline: none;
-  margin: 1em 7em 2em 7em;
+  margin: 0em 5vw 2em 5vw;
   position: relative;
 `;
 
