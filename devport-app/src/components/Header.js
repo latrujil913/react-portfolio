@@ -18,7 +18,7 @@ const HeaderContainer = styled.nav`
 
 const Button = styled.button`
   font-size: 0.9em;
-  margin: 1em 0vw 1em 0vw;
+  margin: 1em 1em 1em 1em;
   border: transparent;
   background: transparent;
   color: #98e342;
@@ -39,7 +39,6 @@ const ButtonContainer = styled.nav`
   @media (max-width: 750px) {
     margin-left: unset;
   }
-}
 `;
 
 const Logo = styled.img`
@@ -48,11 +47,6 @@ const Logo = styled.img`
   margin: 5px;
 `;
 
-{
-  /* <a href="https://www.vecteezy.com/free-vector/animal">
-    Animal Vectors by Vecteezy
-</a> */
-}
 class Header extends Component {
   render() {
     return (
