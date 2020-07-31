@@ -15,7 +15,7 @@ const HomeContainer = styled.div`
 class Home extends Component {
   render() {
     return (
-      <FadeIn duration="1" delay="1" trnslFrmY="-10" trnslToY="0">
+      <FadeIn duration=".75" delay="1" trnslFrmY="10" trnslToY="0">
         <HomeContainer>
           <h1>Luis Trujillo</h1>
           <p>Software Engineer</p>
