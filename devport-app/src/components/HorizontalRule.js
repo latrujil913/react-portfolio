@@ -4,7 +4,7 @@ import styled from "styled-components";
 // NOTE: margin: top right bottom left
 const HeaderRule = styled.hr`
   height: 1px;
-  background: white;
+  background: linear-gradient(to right, white, #98e342);
   border: none;
   outline: none;
   margin: 0em 5vw 2em 5vw;
