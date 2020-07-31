@@ -9,6 +9,19 @@ const HeaderRule = styled.hr`
   outline: none;
   margin: 0em 5vw 2em 5vw;
   position: relative;
+
+  @keyframes line_animation {
+    from {
+      width: 0vw;
+    }
+    to {
+      width: 90vw;
+    }
+  }
+
+  animation-name: line_animation;
+  animation-duration: 1s;
+  animation-timing-function: linear;
 `;
 
 class HorizontalRule extends Component {

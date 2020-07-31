@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import FadeIn from "./FadeIn";
 
 const HomeContainer = styled.div`
   min-height: 70vh;
@@ -14,10 +15,12 @@ const HomeContainer = styled.div`
 class Home extends Component {
   render() {
     return (
-      <HomeContainer>
-        <h1>Luis Trujillo</h1>
-        <p>Software Engineer</p>
-      </HomeContainer>
+      <FadeIn duration="1" delay="1" trnslFrmY="-10" trnslToY="0">
+        <HomeContainer>
+          <h1>Luis Trujillo</h1>
+          <p>Software Engineer</p>
+        </HomeContainer>
+      </FadeIn>
     );
   }
 }
