@@ -7,7 +7,7 @@ const HeaderRule = styled.hr`
   background: linear-gradient(to right, white, #98e342);
   border: none;
   outline: none;
-  margin: 0em 5vw 2em 5vw;
+  margin: 0em 5vw 0em 5vw;
   position: relative;
 
   @keyframes line_animation {

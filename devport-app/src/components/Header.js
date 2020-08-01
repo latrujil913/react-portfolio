@@ -21,11 +21,29 @@ const HeaderContainer = styled.nav`
 
 const Button = styled.button`
   font-size: 0.9em;
-  margin: 1em 2vw 1em 2vw;
-  border: transparent;
-  background: transparent;
+  margin: 1em 0.1vw 1em 0.1vw;
+  border: 0.5px none #98e342;
+  background: ${(props) => (props.primary ? "transparent" : "transparent")};
+  border-radius: 2px;
+  padding: 0.25em 1em;
   color: #98e342;
   font-family: "Lucida Console", Monaco, monospace;
+  transition: 0.01s;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(126, 209, 31, 0.15);
+    border-color: #b6eb7a;
+    color: #b6eb7a;
+    box-shadow: 0 0.5em 0.5em -0.4em #b6eb7a;
+    transform: translateY(-0.15em);
+  }
+
+  &:active {
+    background-color: rgba(126, 209, 31, 0.15);
+    transform: translateY(1px);
+    box-shadow: 0 0em 0.5em -0.4em #b6eb7a;
+  }
 `;
 
 const LogoContainer = styled.nav`
@@ -55,6 +73,7 @@ class Header extends Component {
         <FadeIn duration=".25" delay="1.75" trnslFrmY="3" trnslToY="0">
           <ButtonContainer>
             <Button
+              primary={false}
               onMouseOver={() => {
                 console.log("I found you mouse.");
               }}
