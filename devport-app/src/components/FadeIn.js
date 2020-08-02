@@ -24,6 +24,11 @@ const FadeIn = styled.div`
 
   @keyframes fadein {
     from {
+      opacity: 0;
+      transform: translate(
+        ${(props) => (props.trnslFrmX ? props.trnslFrmX : "0")}%,
+        ${(props) => (props.trnslFrmY ? props.trnslFrmY : "0")}%
+      );
     }
     to {
       opacity: 1;
@@ -53,7 +58,7 @@ const FadeIn = styled.div`
   }
 
   /* Safari, Chrome and Opera > 12.1 */
-  @-webkit-keyframes fadein-wk {
+  @-webkit-keyframes fadein {
     from {
       opacity: 0;
       transform: translate(
@@ -71,7 +76,7 @@ const FadeIn = styled.div`
   }
 
   /* Internet Explorer */
-  @-ms-keyframes fadein-ms {
+  @-ms-keyframes fadein {
     from {
       opacity: 0;
       transform: translate(
