@@ -58,7 +58,7 @@ const FadeIn = styled.div`
   }
 
   /* Safari, Chrome and Opera > 12.1 */
-  @-webkit-keyframes fadein {
+  @-webkit-keyframes fadein-wk {
     from {
       opacity: 0;
       transform: translate(
@@ -76,7 +76,7 @@ const FadeIn = styled.div`
   }
 
   /* Internet Explorer */
-  @-ms-keyframes fadein {
+  @-ms-keyframes fadein-ms {
     from {
       opacity: 0;
       transform: translate(
