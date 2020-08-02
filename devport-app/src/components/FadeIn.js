@@ -4,17 +4,19 @@ const FadeIn = styled.div`
   opacity: 0;
 
   /* Safari, Chrome and Opera > 12.1 */
-  -webkit-animation: fadein
+  -webkit-animation: fadein-wk
     ${(props) => (props.duration ? props.duration : "3")}s;
 
   /* Firefox < 16 */
-  -moz-animation: fadein ${(props) => (props.duration ? props.duration : "3")}s;
+  -moz-animation: fadein-moz
+    ${(props) => (props.duration ? props.duration : "3")}s;
 
   /* Internet Explorer */
-  -ms-animation: fadein ${(props) => (props.duration ? props.duration : "3")}s;
+  -ms-animation: fadein-ms
+    ${(props) => (props.duration ? props.duration : "3")}s;
 
   /* Opera < 12.1 */
-  -o-animation: fadein ${(props) => (props.duration ? props.duration : "3")}s;
+  -o-animation: fadein-o ${(props) => (props.duration ? props.duration : "3")}s;
 
   animation: fadein ${(props) => (props.duration ? props.duration : "3")}s;
   animation-delay: ${(props) => (props.delay ? props.delay : "1")}s;
@@ -22,11 +24,6 @@ const FadeIn = styled.div`
 
   @keyframes fadein {
     from {
-      opacity: 0;
-      transform: translate(
-        ${(props) => (props.trnslFrmX ? props.trnslFrmX : "0")}%,
-        ${(props) => (props.trnslFrmY ? props.trnslFrmY : "0")}%
-      );
     }
     to {
       opacity: 1;
@@ -38,7 +35,7 @@ const FadeIn = styled.div`
   }
 
   /* Firefox < 16 */
-  @-moz-keyframes fadein {
+  @-moz-keyframes fadein-moz {
     from {
       opacity: 0;
       transform: translate(
@@ -56,7 +53,7 @@ const FadeIn = styled.div`
   }
 
   /* Safari, Chrome and Opera > 12.1 */
-  @-webkit-keyframes fadein {
+  @-webkit-keyframes fadein-wk {
     from {
       opacity: 0;
       transform: translate(
@@ -74,7 +71,7 @@ const FadeIn = styled.div`
   }
 
   /* Internet Explorer */
-  @-ms-keyframes fadein {
+  @-ms-keyframes fadein-ms {
     from {
       opacity: 0;
       transform: translate(
@@ -92,7 +89,7 @@ const FadeIn = styled.div`
   }
 
   /* Opera < 12.1 */
-  @-o-keyframes fadein {
+  @-o-keyframes fadein-o {
     from {
       opacity: 0;
       transform: translate(
