@@ -13,6 +13,7 @@ const HeaderContainer = styled.nav`
   align-items: center;
 
   @media (max-width: 750px) {
+    padding-top: 1em;
     justify-content: center;
     align-items: center;
     flex-direction: column;
