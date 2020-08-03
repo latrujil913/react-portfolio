@@ -1,7 +1,16 @@
 .App {
   background-color: #282c34;
   font-family: "Lucida Console", Monaco, monospace;
+  margin: 0;
+  overflow-x: hidden;
 }
+
+/* For debugging purposes */
+/* * {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+} */
 
 .App-logo {
   height: 40vmin;
