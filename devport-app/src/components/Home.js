@@ -10,6 +10,7 @@ const HomeContainer = styled.div`
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  text-align: center;
 `;
 
 class Home extends Component {
