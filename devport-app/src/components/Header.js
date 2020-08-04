@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import logo from "../assets/logo.png";
 import FadeIn from "./FadeIn";
+import { Link } from "react-scroll";
 
 // margin: top right bottom left
 const HeaderContainer = styled.nav`
@@ -20,7 +21,8 @@ const HeaderContainer = styled.nav`
   }
 `;
 
-const Button = styled.button`
+const Button = styled(Link)`
+  display: inline-block;
   font-size: 0.9em;
   margin: 1em 0.1vw 1em 0.1vw;
   border: 0.5px none #98e342;
@@ -74,16 +76,49 @@ class Header extends Component {
         <FadeIn duration=".25" delay="1.75" trnslFrmY="3" trnslToY="0">
           <ButtonContainer>
             <Button
-              primary={false}
-              onMouseOver={() => {
-                console.log("I found you mouse.");
-              }}
+              activeClass="active"
+              to="About"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              onSetActive={this.handleSetActive}
             >
               About
             </Button>
-            <Button>Resume</Button>
-            <Button>Work</Button>
-            <Button>Contact</Button>
+            <Button
+              activeClass="active"
+              to="About"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              onSetActive={this.handleSetActive}
+            >
+              Resume
+            </Button>
+            <Button
+              activeClass="active"
+              to="About"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              onSetActive={this.handleSetActive}
+            >
+              Projects
+            </Button>
+            <Button
+              activeClass="active"
+              to="About"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              onSetActive={this.handleSetActive}
+            >
+              Contact
+            </Button>
           </ButtonContainer>
         </FadeIn>
       </HeaderContainer>
