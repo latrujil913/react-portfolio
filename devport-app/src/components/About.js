@@ -22,9 +22,10 @@ class About extends Component {
           I'm a software engineer based in Guadalupe, CA. I graduated from
           California Polytechnic State University, San Luis Obispo with a
           Bachelors of Science in Computer Science. Passionate about building
-          software
+          software{" "}
           <span role="img" aria-label="rocket">
-            &nbsp;🚀&nbsp;
+            {" "}
+            🚀{" "}
           </span>
           problem-solving, learning, and collaborating.
         </p>

@@ -23,7 +23,7 @@ const HeaderContainer = styled.nav`
 
 const Button = styled(Link)`
   display: inline-block;
-  font-size: calc(6px + 1vmin);
+  font-size: calc(6.5px + 1vmin);
   margin: 1em 0.1vw 1em 0.1vw;
   border: 0.5px none #98e342;
   background: ${(props) => (props.primary ? "transparent" : "transparent")};
@@ -99,7 +99,7 @@ class Header extends Component {
             </Button>
             <Button
               activeClass="active"
-              to="About"
+              to="Project"
               spy={true}
               smooth={true}
               offset={50}
