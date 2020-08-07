@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import bucketquest from "../assets/bucketquest.png";
 
 const ProjectContainer = styled.div`
   min-height: 50vh;
@@ -13,11 +14,39 @@ const ProjectContainer = styled.div`
   text-align: center;
 `;
 
+const SingleProject = styled.nav`
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+`;
+
+const ProjectImage = styled.img`
+  width: 50%;
+  height: auto;
+  margin: 5px;
+`;
+
+const ProjectDescription = styled.div`
+  flex-direction: column;
+`;
+
 class Project extends Component {
   render() {
     return (
       <ProjectContainer id="Project">
         <h3>Projects</h3>
+        <SingleProject>
+          <ProjectImage src={bucketquest} alt="Projects" />
+          <ProjectDescription>
+            <h4>./android/BucketQuest</h4>
+            <hr />
+            <p>
+              An android application that enables anybody to look up a location
+              and see a list of interesting/fun activities to do that are worthy
+              of putting on a bucket list.
+            </p>
+          </ProjectDescription>
+        </SingleProject>
       </ProjectContainer>
     );
   }
