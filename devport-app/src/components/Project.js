@@ -30,6 +30,11 @@ const ProjectDescription = styled.div`
   flex-direction: column;
 `;
 
+const HeaderRule = styled.hr`
+  width: 25%;
+  margin: 1em 1em 1em 1em;
+`;
+
 class Project extends Component {
   render() {
     return (
@@ -39,7 +44,7 @@ class Project extends Component {
           <ProjectImage src={bucketquest} alt="Projects" />
           <ProjectDescription>
             <h4>./android/BucketQuest</h4>
-            <hr />
+            <HeaderRule />
             <p>
               An android application that enables anybody to look up a location
               and see a list of interesting/fun activities to do that are worthy
