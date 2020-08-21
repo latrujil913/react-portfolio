@@ -4,7 +4,6 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
@@ -27,46 +26,46 @@ const ProjectContainer = styled.div`
   }
 `;
 
-const SingleProject = styled.nav`
-  display: flex;
-  margin: 5vh 0vw 0vh 0vw;
-  justify-content: space-evenly;
-  align-self: center;
-  flex-direction: row;
-  min-height: 70vh;
-  width: 100vw;
-`;
+// const SingleProject = styled.nav`
+//   display: flex;
+//   margin: 5vh 0vw 0vh 0vw;
+//   justify-content: space-evenly;
+//   align-self: center;
+//   flex-direction: row;
+//   min-height: 70vh;
+//   width: 100vw;
+// `;
 
-const ImageContainer = styled.div`
-  width: 65%;
-  // margin: 5vw;
-  max-width: 400px;
-  display: flex;
-  justify-content: center;
-  align-self: center;
-`;
+// const ImageContainer = styled.div`
+//   width: 65%;
+//   // margin: 5vw;
+//   max-width: 400px;
+//   display: flex;
+//   justify-content: center;
+//   align-self: center;
+// `;
 
-const ProjectImage = styled.img`
-  display: block;
-  width: 65%;
-  height: auto;
-  // @media (max-width: 895px) {
-  //   width: 85%;
-  // }
-`;
+// const ProjectImage = styled.img`
+//   display: block;
+//   width: 65%;
+//   height: auto;
+//   // @media (max-width: 895px) {
+//   //   width: 85%;
+//   // }
+// `;
 
-const ProjectDescription = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 5vw;
-  width: 20%;
-`;
+// const ProjectDescription = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   margin: 5vw;
+//   width: 20%;
+// `;
 
-const HeaderRule = styled.hr`
-  width: 45%;
-  margin: 1vh 0vw 1vh 1.5vw;
-`;
+// const HeaderRule = styled.hr`
+//   width: 45%;
+//   margin: 1vh 0vw 1vh 1.5vw;
+// `;
 
 const ProjectTitle = styled.div`
   font-size: 20px;
@@ -139,20 +138,3 @@ class Project extends Component {
 }
 
 export default Project;
-
-{
-  /* <SingleProject>
-          <ImageContainer>
-            <ProjectImage src={bucketquest} alt="Projects" />
-          </ImageContainer>
-          <ProjectDescription>
-            <h3>./android/BucketQuest</h3>
-            <HeaderRule />
-            <p>
-              An android application that enables anybody to look up a location
-              and see a list of interesting/fun activities to do that are worthy
-              of putting on a bucket list.
-            </p>
-          </ProjectDescription>
-        </SingleProject> */
-}
