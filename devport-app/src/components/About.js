@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 const AboutContainer = styled.div`
-  min-height: 50vh;
+  min-height: 30vh;
   margin: 0vh 15vw 20vh 15vw;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@ class About extends Component {
   render() {
     return (
       <AboutContainer id="About">
-        <h3>About</h3>
+        <h1>About</h1>
         <p>
           I'm a software engineer based in Guadalupe, CA. I graduated from
           California Polytechnic State University, San Luis Obispo with a

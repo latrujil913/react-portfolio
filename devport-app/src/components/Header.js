@@ -13,7 +13,7 @@ const HeaderContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: 750px) {
+  @media (max-width: 895px) {
     padding-top: 1em;
     justify-content: center;
     align-items: center;
@@ -80,13 +80,13 @@ class Header extends Component {
               to="About"
               spy={true}
               smooth={true}
-              offset={50}
+              offset={-100}
               duration={500}
               onSetActive={this.handleSetActive}
             >
               About
             </Button>
-            <Button
+            {/* <Button
               activeClass="active"
               to="About"
               spy={true}
@@ -96,13 +96,13 @@ class Header extends Component {
               onSetActive={this.handleSetActive}
             >
               Resume
-            </Button>
+            </Button> */}
             <Button
               activeClass="active"
               to="Project"
               spy={true}
               smooth={true}
-              offset={50}
+              // offset={50}
               duration={500}
               onSetActive={this.handleSetActive}
             >
