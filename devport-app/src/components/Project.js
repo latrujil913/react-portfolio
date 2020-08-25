@@ -26,47 +26,6 @@ const ProjectContainer = styled.div`
   }
 `;
 
-// const SingleProject = styled.nav`
-//   display: flex;
-//   margin: 5vh 0vw 0vh 0vw;
-//   justify-content: space-evenly;
-//   align-self: center;
-//   flex-direction: row;
-//   min-height: 70vh;
-//   width: 100vw;
-// `;
-
-// const ImageContainer = styled.div`
-//   width: 65%;
-//   // margin: 5vw;
-//   max-width: 400px;
-//   display: flex;
-//   justify-content: center;
-//   align-self: center;
-// `;
-
-// const ProjectImage = styled.img`
-//   display: block;
-//   width: 65%;
-//   height: auto;
-//   // @media (max-width: 895px) {
-//   //   width: 85%;
-//   // }
-// `;
-
-// const ProjectDescription = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   margin: 5vw;
-//   width: 20%;
-// `;
-
-// const HeaderRule = styled.hr`
-//   width: 45%;
-//   margin: 1vh 0vw 1vh 1.5vw;
-// `;
-
 const ProjectTitle = styled.div`
   font-size: 20px;
   margin-bottom: 10px;
@@ -79,10 +38,15 @@ const ProjectBody = styled.div`
   font-size: 13px;
   font-family: "Lucida Console", Monaco, monospace;
   text-align: left;
+  min-height: 12.5vh;
 `;
 
 const CardLink = styled.a`
   text-decoration: none;
+`;
+
+const SectionHeader = styled.div`
+  margin-bottom: 5vh;
 `;
 
 const theme = createMuiTheme({
@@ -101,16 +65,77 @@ const BucketQuest = () => {
               conponent="img"
               alt="Bucket Quest"
               height="140"
-              image={require("../assets/bucketquest.png")}
+              image={require("../assets/images/projects/bucketquest.png")}
               title="Go to BucketQuest repository"
               style={{ height: 0, paddingTop: "100%" }}
             />
             <CardContent>
-              <ProjectTitle>./android/BucketQuest</ProjectTitle>
+              <ProjectTitle>
+                ./android/<u>BucketQuest</u>
+              </ProjectTitle>
               <ProjectBody>
-                An android application that enables users to look up a location
-                and see a list of interesting/fun activities to do that are
-                worthy of putting on a bucket list.
+                An android application that enables users to find locations of
+                activities that are worthy of putting on a bucket list.{"   "}
+              </ProjectBody>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+      </CardLink>
+    </Grid>
+  );
+};
+
+const Pomodoro = () => {
+  return (
+    <Grid item xs container justify="center">
+      <CardLink href="https://github.com/latrujil913/pomodoro">
+        <Card variant="outlined" style={{ maxWidth: 500 }}>
+          <CardActionArea>
+            <CardMedia
+              conponent="img"
+              alt="Pomodoro"
+              height="140"
+              image={require("../assets/images/projects/pomodoro.png")}
+              title="Go to Pomodoro repository"
+              style={{ height: 0, paddingTop: "100%" }}
+            />
+            <CardContent>
+              <ProjectTitle>
+                ./android/<u>Pomodoro</u>
+              </ProjectTitle>
+              <ProjectBody>
+                Android application that enhances productivity by parsing work
+                into manageable 25-minute sessions and 5-minute breaks.
+              </ProjectBody>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+      </CardLink>
+    </Grid>
+  );
+};
+
+const Portfolio = () => {
+  return (
+    <Grid item xs container justify="center">
+      <CardLink href="https://github.com/latrujil913/react-portfolio">
+        <Card variant="outlined" style={{ maxWidth: 500 }}>
+          <CardActionArea>
+            <CardMedia
+              conponent="img"
+              alt="Portfolio"
+              height="140"
+              image={require("../assets/images/projects/portfolio.png")}
+              title="Go to portfolio repository"
+              style={{ height: 0, paddingTop: "100%" }}
+            />
+            <CardContent>
+              <ProjectTitle>
+                ./webdev/<u>Portfolio</u>
+              </ProjectTitle>
+              <ProjectBody>
+                Personal website built with the ReactJS framework and popular
+                libraries such as Styled Components and Material-UI.{"   "}
               </ProjectBody>
             </CardContent>
           </CardActionArea>
@@ -124,12 +149,14 @@ class Project extends Component {
   render() {
     return (
       <ProjectContainer id="Project">
-        <h1>Projects</h1>
+        <SectionHeader>
+          <h1>Projects</h1>
+        </SectionHeader>
         <ThemeProvider theme={theme}>
-          <Grid container spacing={4}>
+          <Grid container spacing={5}>
             {BucketQuest()}
-            {BucketQuest()}
-            {BucketQuest()}
+            {Pomodoro()}
+            {Portfolio()}
           </Grid>
         </ThemeProvider>
       </ProjectContainer>

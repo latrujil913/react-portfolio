@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import FadeIn from "./FadeIn";
+import FadeIn from "./animations/FadeIn";
 
 const HomeContainer = styled.div`
   min-height: 70vh;

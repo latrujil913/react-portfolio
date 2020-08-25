@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import logo from "../assets/logo.png";
-import FadeIn from "./FadeIn";
+import FadeIn from "./animations/FadeIn";
 import { Link } from "react-scroll";
 
 // margin: top right bottom left
@@ -32,6 +32,7 @@ const Button = styled(Link)`
   color: #98e342;
   font-family: "Lucida Console", Monaco, monospace;
   transition: 0.01s;
+  cursor: pointer;
 
   &:hover,
   &:focus {
