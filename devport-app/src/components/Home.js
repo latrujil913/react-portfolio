@@ -31,6 +31,18 @@ const IconStyle = () => {
   };
 };
 
+const handleLinkedInClick = () => {
+  window.open("https://www.linkedin.com/in/luis-trujillo-4ba637194/");
+};
+
+const handleGitHubClick = () => {
+  window.open("https://github.com/latrujil913");
+};
+
+const handleMailToClick = () => {
+  window.location.replace("mailto:ltluistrujillo25@gmail.com");
+};
+
 class Home extends Component {
   render() {
     return (
@@ -41,18 +53,21 @@ class Home extends Component {
         </HomeContainer>
         <IconBar>
           <IconButton
+            onClick={handleLinkedInClick}
             className={"icon"}
             style={{ backgroundColor: "transparent" }}
           >
             <LinkedInIcon className={"icon"} style={IconStyle()} />
           </IconButton>
           <IconButton
+            onClick={handleGitHubClick}
             className={"icon"}
             style={{ backgroundColor: "transparent" }}
           >
             <GitHubIcon className={"icon"} style={IconStyle()} />
           </IconButton>
           <IconButton
+            onClick={handleMailToClick}
             className={"icon"}
             style={{ backgroundColor: "transparent" }}
           >
