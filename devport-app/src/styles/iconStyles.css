@@ -1,0 +1,21 @@
+/* .icon {
+  display: inline-block;
+  font-size: calc(6.5px + 1vmin);
+  margin: 1em 0.1vw 1em 0.1vw;
+  /* &:hover,
+  &:focus {
+    background-color: rgba(126, 209, 31, 0.15);
+    border-color: #b6eb7a;
+    color: #b6eb7a;
+    box-shadow: 0 0.5em 0.5em -0.4em #b6eb7a;
+    transform: translateY(-0.15em);
+  } */
+/* } */
+
+.icon:hover {
+  /* background-color: rgba(126, 209, 31, 0.15) !important; */
+  /* border-color: #b6eb7a; */
+  color: #b6eb7a !important;
+  /* box-shadow: 0 0.5em 0.5em -0.4em #b6eb7a; */
+  /* transform: translateY(-0.15em); */
+}

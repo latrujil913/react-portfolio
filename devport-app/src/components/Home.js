@@ -4,6 +4,8 @@ import FadeIn from "./animations/FadeIn";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import EmailIcon from "@material-ui/icons/Email";
+import IconButton from "@material-ui/core/IconButton";
+import "../styles/iconStyles.css";
 
 const HomeContainer = styled.div`
   min-height: 70vh;
@@ -23,12 +25,9 @@ const IconBar = styled.div`
 
 const IconStyle = () => {
   return {
-    fontSize: 30,
+    fontSize: 35,
     color: "white",
-    margin: 5,
-    textShadowColor: "#b6eb7a",
-    textShadowOffset: { width: -1, height: 0 },
-    textShadowRadius: 10,
+    margin: 20,
   };
 };
 
@@ -41,9 +40,24 @@ class Home extends Component {
           <p>Software Engineer</p>
         </HomeContainer>
         <IconBar>
-          <LinkedInIcon style={IconStyle()} />
-          <GitHubIcon style={IconStyle()} />
-          <EmailIcon style={IconStyle()} />
+          <IconButton
+            className={"icon"}
+            style={{ backgroundColor: "transparent" }}
+          >
+            <LinkedInIcon className={"icon"} style={IconStyle()} />
+          </IconButton>
+          <IconButton
+            className={"icon"}
+            style={{ backgroundColor: "transparent" }}
+          >
+            <GitHubIcon className={"icon"} style={IconStyle()} />
+          </IconButton>
+          <IconButton
+            className={"icon"}
+            style={{ backgroundColor: "transparent" }}
+          >
+            <EmailIcon className={"icon"} style={IconStyle()} />
+          </IconButton>
         </IconBar>
       </FadeIn>
     );
