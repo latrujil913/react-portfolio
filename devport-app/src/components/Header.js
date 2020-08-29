@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.png";
+import logo from "../assets/images/misc/logo.png";
 import FadeIn from "./animations/FadeIn";
 import { Link } from "react-scroll";
 
@@ -109,7 +109,7 @@ class Header extends Component {
             >
               Projects
             </Button>
-            <Button
+            {/* <Button
               activeClass="active"
               to="About"
               spy={true}
@@ -119,7 +119,7 @@ class Header extends Component {
               onSetActive={this.handleSetActive}
             >
               Contact
-            </Button>
+            </Button> */}
           </ButtonContainer>
         </FadeIn>
       </HeaderContainer>

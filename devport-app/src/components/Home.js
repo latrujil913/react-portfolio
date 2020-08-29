@@ -21,6 +21,17 @@ const IconBar = styled.div`
   text-align: center;
 `;
 
+const IconStyle = () => {
+  return {
+    fontSize: 30,
+    color: "white",
+    margin: 5,
+    textShadowColor: "#b6eb7a",
+    textShadowOffset: { width: -1, height: 0 },
+    textShadowRadius: 10,
+  };
+};
+
 class Home extends Component {
   render() {
     return (
@@ -30,9 +41,9 @@ class Home extends Component {
           <p>Software Engineer</p>
         </HomeContainer>
         <IconBar>
-          <LinkedInIcon />
-          <GitHubIcon />
-          <EmailIcon />
+          <LinkedInIcon style={IconStyle()} />
+          <GitHubIcon style={IconStyle()} />
+          <EmailIcon style={IconStyle()} />
         </IconBar>
       </FadeIn>
     );
