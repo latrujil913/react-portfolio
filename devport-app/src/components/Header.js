@@ -68,7 +68,7 @@ const Logo = styled.img`
 class Header extends Component {
   render() {
     return (
-      <HeaderContainer>
+      <HeaderContainer id="Header">
         <FadeIn duration=".5" delay="2" trnslFromY="3" trnslToY="0">
           <LogoContainer>
             <Logo src={logo} alt="Logo" />
@@ -76,6 +76,17 @@ class Header extends Component {
         </FadeIn>
         <FadeIn duration=".25" delay="1.75" trnslFrmY="3" trnslToY="0">
           <ButtonContainer>
+            <Button
+              activeClass="active"
+              to="Project"
+              spy={true}
+              smooth={true}
+              // offset={50}
+              duration={500}
+              onSetActive={this.handleSetActive}
+            >
+              Projects
+            </Button>
             <Button
               activeClass="active"
               to="About"
@@ -98,17 +109,6 @@ class Header extends Component {
             >
               Resume
             </Button> */}
-            <Button
-              activeClass="active"
-              to="Project"
-              spy={true}
-              smooth={true}
-              // offset={50}
-              duration={500}
-              onSetActive={this.handleSetActive}
-            >
-              Projects
-            </Button>
             {/* <Button
               activeClass="active"
               to="About"

@@ -9,7 +9,7 @@ import Grid from "@material-ui/core/Grid";
 
 const ProjectContainer = styled.div`
   min-height: 100vh;
-  margin: 0vh 15vw 20vh 15vw;
+  margin: 10vh 15vw 20vh 15vw;
   display: flex;
   flex-direction: column;
   align-items: center;

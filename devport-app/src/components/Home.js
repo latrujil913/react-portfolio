@@ -8,7 +8,7 @@ import IconButton from "@material-ui/core/IconButton";
 import "../styles/iconStyles.css";
 
 const HomeContainer = styled.div`
-  min-height: 70vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,13 +19,14 @@ const HomeContainer = styled.div`
 `;
 
 const IconBar = styled.div`
+  min-height: 20vh;
   flex-direction: row;
   text-align: center;
 `;
 
 const IconStyle = () => {
   return {
-    fontSize: 35,
+    fontSize: "calc(15px + 2vmin)",
     color: "white",
     margin: 20,
   };
