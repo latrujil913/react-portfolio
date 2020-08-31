@@ -19,6 +19,14 @@ const FooterContainer = styled.div`
   text-align: center;
 `;
 
+const IconStyle = () => {
+  return {
+    fontSize: "calc(15px + 2vmin)",
+    color: "white",
+    margin: 20,
+  };
+};
+
 class Footer extends Component {
   render() {
     return (
@@ -32,8 +40,11 @@ class Footer extends Component {
           duration={500}
           onSetActive={this.handleSetActive}
         >
-          <IconButton>
-            <ExpandLessIcon></ExpandLessIcon>
+          <IconButton
+            className={"icon"}
+            style={{ backgroundColor: "transparent" }}
+          >
+            <ExpandLessIcon className={"icon"} style={IconStyle()} />
           </IconButton>
         </Link>
         <VersionContainer>
