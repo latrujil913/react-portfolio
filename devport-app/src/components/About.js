@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 const AboutContainer = styled.div`
-  min-height: 30vh;
+  min-height: 60vh;
   margin: 0vh 15vw 20vh 15vw;
   display: flex;
   flex-direction: column;
