@@ -59,7 +59,7 @@ const BucketQuest = () => {
   return (
     <Grid item xs container justify="center">
       <CardLink href="https://github.com/latrujil913/bucket-quest">
-        <Card variant="outlined" style={{ maxWidth: 500 }}>
+        <Card variant="outlined" style={{ maxWidth: 500, height: "100%" }}>
           <CardActionArea>
             <CardMedia
               conponent="img"
