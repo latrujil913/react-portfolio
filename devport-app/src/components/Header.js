@@ -78,6 +78,17 @@ class Header extends Component {
           <ButtonContainer>
             <Button
               activeClass="active"
+              to="About"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onSetActive={this.handleSetActive}
+            >
+              About
+            </Button>{" "}
+            <Button
+              activeClass="active"
               to="Project"
               spy={true}
               smooth={true}
@@ -89,26 +100,15 @@ class Header extends Component {
             </Button>
             <Button
               activeClass="active"
-              to="About"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              onSetActive={this.handleSetActive}
-            >
-              About
-            </Button>
-            {/* <Button
-              activeClass="active"
-              to="About"
+              to="Skills"
               spy={true}
               smooth={true}
               offset={50}
               duration={500}
               onSetActive={this.handleSetActive}
             >
-              Resume
-            </Button> */}
+              Skills
+            </Button>
             {/* <Button
               activeClass="active"
               to="About"
