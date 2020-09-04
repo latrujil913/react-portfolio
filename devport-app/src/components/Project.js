@@ -27,7 +27,7 @@ const ProjectContainer = styled.div`
 `;
 
 const ProjectTitle = styled.div`
-  font-size: 20px;
+  font-size: calc(7px + 1.5vmin);
   margin-bottom: 10px;
   font-family: "Lucida Console", Monaco, monospace;
   text-align: left;
@@ -35,7 +35,7 @@ const ProjectTitle = styled.div`
 `;
 
 const ProjectBody = styled.div`
-  font-size: 13px;
+  font-size: calc(5px + 1.4vmin);
   font-family: "Lucida Console", Monaco, monospace;
   text-align: left;
   min-height: 12.5vh;
