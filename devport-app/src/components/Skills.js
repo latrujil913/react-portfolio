@@ -45,9 +45,8 @@ const SectionHeader = styled.div`
 
 const iconStyles = () => {
   return {
-    size: "3em",
+    size: "2.25em",
     color: "white",
-    margin: 20,
     className: "icon",
   };
 };

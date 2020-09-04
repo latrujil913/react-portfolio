@@ -39,6 +39,7 @@ const ProjectBody = styled.div`
   font-family: "Lucida Console", Monaco, monospace;
   text-align: left;
   min-height: 12.5vh;
+  min-width: 250px;
 `;
 
 const CardLink = styled.a`
