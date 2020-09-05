@@ -6,6 +6,9 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import EmailIcon from "@material-ui/icons/Email";
 import IconButton from "@material-ui/core/IconButton";
 import "../styles/iconStyles.css";
+// import Typist from "react-typist";
+// import ReactTypingEffect from "react-typing-effect";// TODO: uninstall
+import Typewriter from "typewriter-effect";
 
 const HomeContainer = styled.div`
   min-height: 60vh;
@@ -50,7 +53,27 @@ class Home extends Component {
       <FadeIn duration=".75" delay="1" trnslFrmY="10" trnslToY="0">
         <HomeContainer>
           <h1>Luis Trujillo</h1>
-          <p>Software Engineer</p>
+          {/* <Typist
+            avgTypingDelay={100}
+            cursor={{
+              show: true,
+              blink: true,
+              element: "|",
+              hideWhenDone: true,
+              hideWhenDoneDelay: 1000,
+            }}
+          >
+            <Typist.Delay ms={2500} />
+            Software Engineer
+          </Typist> */}
+          {/* <ReactTypingEffect
+            text="Software Engineer" //text=["Hello.", "World!"]
+          /> */}
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter.pauseFor(2500).typeString("Software Engineer").start();
+            }}
+          />
         </HomeContainer>
         <IconBar>
           <IconButton
