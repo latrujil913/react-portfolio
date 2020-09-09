@@ -53,22 +53,6 @@ class Home extends Component {
       <FadeIn duration=".75" delay="1" trnslFrmY="10" trnslToY="0">
         <HomeContainer>
           <h1>Luis Trujillo</h1>
-          {/* <Typist
-            avgTypingDelay={100}
-            cursor={{
-              show: true,
-              blink: true,
-              element: "|",
-              hideWhenDone: true,
-              hideWhenDoneDelay: 1000,
-            }}
-          >
-            <Typist.Delay ms={2500} />
-            Software Engineer
-          </Typist> */}
-          {/* <ReactTypingEffect
-            text="Software Engineer" //text=["Hello.", "World!"]
-          /> */}
           <Typewriter
             onInit={(typewriter) => {
               typewriter.pauseFor(2500).typeString("Software Engineer").start();

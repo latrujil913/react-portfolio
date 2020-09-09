@@ -6,6 +6,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import CardHeader from "@material-ui/core/CardHeader";
 
 const ProjectContainer = styled.div`
   min-height: 100vh;
@@ -24,14 +25,6 @@ const ProjectContainer = styled.div`
     align-items: center;
     flex-direction: column;
   }
-`;
-
-const ProjectTitle = styled.div`
-  font-size: calc(7px + 1.5vmin);
-  margin-bottom: 10px;
-  font-family: "Lucida Console", Monaco, monospace;
-  text-align: left;
-  font-weight: bold;
 `;
 
 const ProjectBody = styled.div`
@@ -62,6 +55,10 @@ const BucketQuest = () => {
       <CardLink href="https://github.com/latrujil913/bucket-quest">
         <Card variant="outlined" style={{ maxWidth: 500, height: "100%" }}>
           <CardActionArea>
+            <CardHeader
+              title="./android/BucketQuest"
+              subheader="Activity Finder"
+            />
             <CardMedia
               conponent="img"
               alt="Bucket Quest"
@@ -71,12 +68,9 @@ const BucketQuest = () => {
               style={{ height: 0, paddingTop: "100%" }}
             />
             <CardContent>
-              <ProjectTitle>
-                ./android/<u>BucketQuest</u>
-              </ProjectTitle>
               <ProjectBody>
                 An android application that enables users to find locations of
-                activities that are worthy of putting on a bucket list.{"   "}
+                activities that are worthy of putting on a bucket list.
               </ProjectBody>
             </CardContent>
           </CardActionArea>
@@ -92,6 +86,10 @@ const Pomodoro = () => {
       <CardLink href="https://github.com/latrujil913/pomodoro">
         <Card variant="outlined" style={{ maxWidth: 500 }}>
           <CardActionArea>
+            <CardHeader
+              title="./android/Pomodoro"
+              subheader="Productivity Timer"
+            />
             <CardMedia
               conponent="img"
               alt="Pomodoro"
@@ -101,9 +99,6 @@ const Pomodoro = () => {
               style={{ height: 0, paddingTop: "100%" }}
             />
             <CardContent>
-              <ProjectTitle>
-                ./android/<u>Pomodoro</u>
-              </ProjectTitle>
               <ProjectBody>
                 Android application that enhances productivity by parsing work
                 into manageable 25-minute sessions and 5-minute breaks.
@@ -122,6 +117,10 @@ const Portfolio = () => {
       <CardLink href="https://github.com/latrujil913/react-portfolio">
         <Card variant="outlined" style={{ maxWidth: 500 }}>
           <CardActionArea>
+            <CardHeader
+              title="./webdev/Portfolio"
+              subheader="Personal Portfolio"
+            />
             <CardMedia
               conponent="img"
               alt="Portfolio"
@@ -131,9 +130,6 @@ const Portfolio = () => {
               style={{ height: 0, paddingTop: "100%" }}
             />
             <CardContent>
-              <ProjectTitle>
-                ./webdev/<u>Portfolio</u>
-              </ProjectTitle>
               <ProjectBody>
                 Personal website built with the ReactJS framework and popular
                 libraries such as Styled Components and Material-UI.{"   "}
