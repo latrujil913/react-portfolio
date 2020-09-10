@@ -47,93 +47,75 @@ const theme = createMuiTheme({
   palette: {
     type: "dark",
   },
+  overrides: {
+    // Style sheet name ⚛️
+    MuiCardHeader: {
+      // Name of the rule
+      title: {
+        // Some CSS
+        fontFamily: "Lucida Console, Monaco, monospace",
+      },
+      subheader: {
+        // Some CSS
+        fontFamily: "Lucida Console, Monaco, monospace",
+      },
+    },
+  },
 });
 
-const BucketQuest = () => {
-  return (
-    <Grid item xs container justify="center">
-      <CardLink href="https://github.com/latrujil913/bucket-quest">
-        <Card variant="outlined" style={{ maxWidth: 500, height: "100%" }}>
-          <CardActionArea>
-            <CardHeader
-              title="./android/BucketQuest"
-              subheader="Activity Finder"
-            />
-            <CardMedia
-              conponent="img"
-              alt="Bucket Quest"
-              height="140"
-              image={require("../assets/images/projects/bucketquest.png")}
-              title="Go to BucketQuest repository"
-              style={{ height: 0, paddingTop: "100%" }}
-            />
-            <CardContent>
-              <ProjectBody>
-                An android application that enables users to find locations of
-                activities that are worthy of putting on a bucket list.
-              </ProjectBody>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </CardLink>
-    </Grid>
-  );
-};
+const projectData = [
+  {
+    id: 1,
+    link: "https://github.com/latrujil913/bucket-quest",
+    title: "./android/BucketQuest",
+    subheader: "Activity Finder",
+    alt: "Bucket Quest",
+    img: require("../assets/images/projects/bucketquest.png"),
+    hint: "Go to BucketQuest repository",
+    decsription:
+      "An android application that enables users to find locations of activities that are worthy of putting on a bucket list.",
+  },
+  {
+    id: 2,
+    link: "https://github.com/latrujil913/pomodoro",
+    title: "./android/Pomodoro",
+    subheader: "Productivity Timer",
+    alt: "Pomodoro",
+    img: require("../assets/images/projects/pomodoro.png"),
+    hint: "Go to Pomodoro repository",
+    decsription:
+      "Android application that enhances productivity by parsing work into manageable 25-minute sessions.",
+  },
+  {
+    id: 3,
+    link: "https://github.com/latrujil913/react-portfolio",
+    title: "./webdev/Portfolio",
+    subheader: "Personal Portfolio",
+    alt: "Portfolio",
+    img: require("../assets/images/projects/portfolio.png"),
+    hint: "Go to my portfolio's repository",
+    decsription:
+      "Personal website built with the ReactJS framework and popular libraries such as Styled Components and Material-UI.",
+  },
+];
 
-const Pomodoro = () => {
+const singleProject = (project) => {
   return (
-    <Grid item xs container justify="center">
-      <CardLink href="https://github.com/latrujil913/pomodoro">
+    <Grid key={project.id} item xs container justify="center">
+      <CardLink href={project.link}>
         <Card variant="outlined" style={{ maxWidth: 500 }}>
           <CardActionArea>
-            <CardHeader
-              title="./android/Pomodoro"
-              subheader="Productivity Timer"
-            />
+            <CardHeader title={project.title} subheader={project.subheader} />
             <CardMedia
               conponent="img"
-              alt="Pomodoro"
+              alt={project.alt}
               height="140"
-              image={require("../assets/images/projects/pomodoro.png")}
-              title="Go to Pomodoro repository"
+              image={project.img}
+              title={project.hint}
               style={{ height: 0, paddingTop: "100%" }}
             />
             <CardContent>
-              <ProjectBody>
-                Android application that enhances productivity by parsing work
-                into manageable 25-minute sessions and 5-minute breaks.
-              </ProjectBody>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </CardLink>
-    </Grid>
-  );
-};
-
-const Portfolio = () => {
-  return (
-    <Grid item xs container justify="center">
-      <CardLink href="https://github.com/latrujil913/react-portfolio">
-        <Card variant="outlined" style={{ maxWidth: 500 }}>
-          <CardActionArea>
-            <CardHeader
-              title="./webdev/Portfolio"
-              subheader="Personal Portfolio"
-            />
-            <CardMedia
-              conponent="img"
-              alt="Portfolio"
-              height="140"
-              image={require("../assets/images/projects/portfolio.png")}
-              title="Go to portfolio repository"
-              style={{ height: 0, paddingTop: "100%" }}
-            />
-            <CardContent>
-              <ProjectBody>
-                Personal website built with the ReactJS framework and popular
-                libraries such as Styled Components and Material-UI.{"   "}
-              </ProjectBody>
+              <ProjectBody>{project.decsription}</ProjectBody>
             </CardContent>
           </CardActionArea>
         </Card>
@@ -151,9 +133,10 @@ class Project extends Component {
         </SectionHeader>
         <ThemeProvider theme={theme}>
           <Grid container spacing={5}>
-            {BucketQuest()}
+            {projectData.map((project) => singleProject(project))}
+            {/* {BucketQuest()}
             {Pomodoro()}
-            {Portfolio()}
+            {Portfolio()} */}
           </Grid>
         </ThemeProvider>
       </ProjectContainer>

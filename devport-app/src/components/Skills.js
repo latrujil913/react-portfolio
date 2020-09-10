@@ -61,6 +61,7 @@ const Kotlin = () => {
       <IconButton
         className={"icon"}
         onClick={() => handleLinkClick("https://kotlinlang.org/")}
+        style={{ backgroundColor: "transparent" }}
       >
         <IconContext.Provider value={iconStyles()}>
           <div>
