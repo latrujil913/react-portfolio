@@ -7,6 +7,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import CardHeader from "@material-ui/core/CardHeader";
+import Typography from "@material-ui/core/Typography";
 
 const ProjectContainer = styled.div`
   min-height: 100vh;
@@ -17,7 +18,7 @@ const ProjectContainer = styled.div`
   justify-content: center;
   font-size: calc(5px + 1.5vmin);
   color: white;
-  text-align: center;
+  text-align: left;
 
   @media (max-width: 895px) {
     padding-top: 1em;
@@ -29,9 +30,8 @@ const ProjectContainer = styled.div`
 
 const ProjectBody = styled.div`
   font-size: calc(5px + 1.4vmin);
-  font-family: "Lucida Console", Monaco, monospace;
   text-align: left;
-  min-height: 12.5vh;
+  min-height: 10vh;
   min-width: 250px;
 `;
 
@@ -54,10 +54,17 @@ const theme = createMuiTheme({
       title: {
         // Some CSS
         fontFamily: "Lucida Console, Monaco, monospace",
+        fontSize: "calc(6px +1.4vmin)",
       },
       subheader: {
         // Some CSS
         fontFamily: "Lucida Console, Monaco, monospace",
+      },
+    },
+    MuiTypography: {
+      body1: {
+        fontFamily: "Lucida Console, Monaco, monospace",
+        fontSize: "calc(5px + 1.4vmin)",
       },
     },
   },
@@ -72,7 +79,7 @@ const projectData = [
     alt: "Bucket Quest",
     img: require("../assets/images/projects/bucketquest.png"),
     hint: "Go to BucketQuest repository",
-    decsription:
+    description:
       "An android application that enables users to find locations of activities that are worthy of putting on a bucket list.",
   },
   {
@@ -83,7 +90,7 @@ const projectData = [
     alt: "Pomodoro",
     img: require("../assets/images/projects/pomodoro.png"),
     hint: "Go to Pomodoro repository",
-    decsription:
+    description:
       "Android application that enhances productivity by parsing work into manageable 25-minute sessions.",
   },
   {
@@ -94,7 +101,7 @@ const projectData = [
     alt: "Portfolio",
     img: require("../assets/images/projects/portfolio.png"),
     hint: "Go to my portfolio's repository",
-    decsription:
+    description:
       "Personal website built with the ReactJS framework and popular libraries such as Styled Components and Material-UI.",
   },
 ];
@@ -105,7 +112,11 @@ const singleProject = (project) => {
       <CardLink href={project.link}>
         <Card variant="outlined" style={{ maxWidth: 500 }}>
           <CardActionArea>
-            <CardHeader title={project.title} subheader={project.subheader} />
+            <CardHeader
+              variant="body1"
+              title={project.title}
+              subheader={project.subheader}
+            />
             <CardMedia
               conponent="img"
               alt={project.alt}
@@ -115,7 +126,9 @@ const singleProject = (project) => {
               style={{ height: 0, paddingTop: "100%" }}
             />
             <CardContent>
-              <ProjectBody>{project.decsription}</ProjectBody>
+              <ProjectBody>
+                <Typography>{project.description}</Typography>
+              </ProjectBody>
             </CardContent>
           </CardActionArea>
         </Card>
@@ -134,9 +147,6 @@ class Project extends Component {
         <ThemeProvider theme={theme}>
           <Grid container spacing={5}>
             {projectData.map((project) => singleProject(project))}
-            {/* {BucketQuest()}
-            {Pomodoro()}
-            {Portfolio()} */}
           </Grid>
         </ThemeProvider>
       </ProjectContainer>
