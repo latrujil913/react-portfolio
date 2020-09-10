@@ -54,7 +54,7 @@ const theme = createMuiTheme({
       title: {
         // Some CSS
         fontFamily: "Lucida Console, Monaco, monospace",
-        fontSize: "calc(6px +1.4vmin)",
+        fontSize: "calc(7px +1.4vmin)",
       },
       subheader: {
         // Some CSS
@@ -74,8 +74,8 @@ const projectData = [
   {
     id: 1,
     link: "https://github.com/latrujil913/bucket-quest",
-    title: "./android/BucketQuest",
-    subheader: "Activity Finder",
+    title: "BucketQuest",
+    subheader: "Android - Activity Finder",
     alt: "Bucket Quest",
     img: require("../assets/images/projects/bucketquest.png"),
     hint: "Go to BucketQuest repository",
@@ -85,8 +85,8 @@ const projectData = [
   {
     id: 2,
     link: "https://github.com/latrujil913/pomodoro",
-    title: "./android/Pomodoro",
-    subheader: "Productivity Timer",
+    title: "Pomodoro",
+    subheader: "Android - Productivity Timer",
     alt: "Pomodoro",
     img: require("../assets/images/projects/pomodoro.png"),
     hint: "Go to Pomodoro repository",
@@ -96,8 +96,8 @@ const projectData = [
   {
     id: 3,
     link: "https://github.com/latrujil913/react-portfolio",
-    title: "./webdev/Portfolio",
-    subheader: "Personal Portfolio",
+    title: "Portfolio",
+    subheader: "React.js - Personal Portfolio",
     alt: "Portfolio",
     img: require("../assets/images/projects/portfolio.png"),
     hint: "Go to my portfolio's repository",
