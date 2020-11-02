@@ -29,7 +29,7 @@ const ProjectContainer = styled.div`
 `;
 
 const ProjectBody = styled.div`
-  font-size: calc(5px + 1.4vmin);
+  // font-size: calc(5px + 1.4vmin);
   text-align: left;
   min-height: 10vh;
   min-width: 250px;
@@ -54,17 +54,23 @@ const theme = createMuiTheme({
       title: {
         // Some CSS
         fontFamily: "Lucida Console, Monaco, monospace",
-        fontSize: "calc(7px +1.4vmin)",
+        fontSize: "calc(8px + 1.4vmin)",
       },
       subheader: {
         // Some CSS
         fontFamily: "Lucida Console, Monaco, monospace",
+        fontSize: "calc(2.5px + 1.4vmin)",
+      },
+    },
+    MuiCardMedia: {
+      media: {
+        fontSize: "calc(2px + 1.4vmin)",
       },
     },
     MuiTypography: {
       body1: {
         fontFamily: "Lucida Console, Monaco, monospace",
-        fontSize: "calc(5px + 1.4vmin)",
+        fontSize: "calc(3.5px + 1.4vmin)",
       },
     },
   },
@@ -104,13 +110,24 @@ const projectData = [
     description:
       "Personal website built with the ReactJS framework and popular libraries such as Styled Components and Material-UI.",
   },
+  {
+    id: 4,
+    link: "https://github.com/latrujil913/calm-on",
+    title: "Calm On!",
+    subheader: "React Native - Mobile Application",
+    alt: "Calm On!",
+    img: require("../assets/images/projects/calmon.png"),
+    hint: "Go to Calm On!'s repository",
+    description:
+      "Calm On! aims to create a fun and interactive experience that can educate youths (ages 6-11) to learn more about mental health techniques.",
+  },
 ];
 
 const singleProject = (project) => {
   return (
     <Grid key={project.id} item xs container justify="center">
       <CardLink href={project.link}>
-        <Card variant="outlined" style={{ maxWidth: 500 }}>
+        <Card variant="outlined" style={{ maxWidth: 500, minWidth: 250 }}>
           <CardActionArea>
             <CardHeader
               variant="body1"
