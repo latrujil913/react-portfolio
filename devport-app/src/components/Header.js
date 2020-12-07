@@ -109,17 +109,6 @@ class Header extends Component {
             >
               Skills
             </Button>
-            {/* <Button
-              activeClass="active"
-              to="About"
-              spy={true}
-              smooth={true}
-              offset={50}
-              duration={500}
-              onSetActive={this.handleSetActive}
-            >
-              Contact
-            </Button> */}
           </ButtonContainer>
         </FadeIn>
       </HeaderContainer>
