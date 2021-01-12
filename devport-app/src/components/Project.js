@@ -112,7 +112,7 @@ const projectData = [
   },
   {
     id: 4,
-    link: "https://github.com/latrujil913/calm-on",
+    link: "https://www.calm-on.org/",
     title: "Calm On!",
     subheader: "React Native - Mobile Application",
     alt: "Calm On!",
