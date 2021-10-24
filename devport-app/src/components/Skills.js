@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { Grid, IconButton } from "@material-ui/core";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { Grid, IconButton } from '@material-ui/core';
 import {
   SiKotlin,
   SiJava,
@@ -16,9 +16,9 @@ import {
   SiGit,
   SiGitkraken,
   SiJavascript,
-} from "react-icons/si";
-import { IconContext } from "react-icons";
-import "../styles/iconStyles.css";
+} from 'react-icons/si';
+import { IconContext } from 'react-icons';
+import '../styles/iconStyles.css';
 
 const SkillsContainer = styled.div`
   min-height: 75vh;
@@ -45,9 +45,9 @@ const SectionHeader = styled.div`
 
 const iconStyles = () => {
   return {
-    size: "2.25em",
-    color: "white",
-    className: "icon",
+    size: '2.25em',
+    color: 'white',
+    className: 'icon',
   };
 };
 
@@ -55,300 +55,124 @@ const handleLinkClick = (linkToSite) => {
   window.open(linkToSite);
 };
 
-const Kotlin = () => {
-  return (
-    <Grid item xs container justify="center">
-      <IconButton
-        className={"icon"}
-        onClick={() => handleLinkClick("https://kotlinlang.org/")}
-        style={{ backgroundColor: "transparent" }}
-      >
-        <IconContext.Provider value={iconStyles()}>
-          <div>
-            <SiKotlin />
-          </div>
-        </IconContext.Provider>
-      </IconButton>
-    </Grid>
-  );
-};
+const skillsData = [
+  {
+    id: 0,
+    name: 'Kotlin',
+    link: 'https://kotlinlang.org/',
+    icon: () => <SiKotlin />,
+  },
+  {
+    id: 13,
+    name: 'Git',
+    link: 'https://git-scm.com/',
+    icon: () => <SiGit />,
+  },
+  {
+    id: 1,
+    name: 'Java',
+    link: 'https://www.java.com/en/',
+    icon: () => <SiJava />,
+  },
+  {
+    id: 2,
+    name: 'ReactJS',
+    link: 'https://reactjs.org/',
+    icon: () => <SiReact />,
+  },
+  {
+    id: 3,
+    name: 'C',
+    link: 'https://docs.microsoft.com/en-us/cpp/c-language/?view=vs-2019',
+    icon: () => <SiC />,
+  },
+  {
+    id: 4,
+    name: 'cPlusPlus',
+    link: 'https://docs.microsoft.com/en-us/cpp/cpp/?view=vs-2019',
+    icon: () => <SiCplusplus />,
+  },
+  {
+    id: 5,
+    name: 'cSharp',
+    link: 'https://docs.microsoft.com/en-us/dotnet/csharp/',
+    icon: () => <SiCsharp />,
+  },
+  {
+    id: 6,
+    name: 'Python',
+    link: 'https://www.python.org/doc/',
+    icon: () => <SiPython />,
+  },
+  {
+    id: 7,
+    name: 'MySQL',
+    link: 'https://dev.mysql.com/doc/',
+    icon: () => <SiMysql />,
+  },
+  {
+    id: 8,
+    name: 'JS',
+    link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+    icon: () => <SiJavascript />,
+  },
+  {
+    id: 9,
+    name: 'HTML5',
+    link: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5',
+    icon: () => <SiHtml5 />,
+  },
+  {
+    id: 10,
+    name: 'CSS',
+    link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/',
+    icon: () => <SiCss3 />,
+  },
+  {
+    id: 11,
+    name: 'Firebase',
+    link: 'https://firebase.google.com/',
+    icon: () => <SiFirebase />,
+  },
+  {
+    id: 12,
+    name: 'GitKraken',
+    link: 'https://support.gitkraken.com/',
+    icon: () => <SiGitkraken />,
+  },
+];
 
-const Java = () => {
-  return (
-    <Grid item xs container justify="center">
-      <IconButton
-        className={"icon"}
-        onClick={() => handleLinkClick("https://www.java.com/en/")}
-        style={{ backgroundColor: "transparent" }}
-      >
-        <IconContext.Provider value={iconStyles()}>
-          <div>
-            <SiJava />
-          </div>
-        </IconContext.Provider>
-      </IconButton>
-    </Grid>
-  );
-};
+function Skill(props) {
+  const { link, icon } = props;
 
-const ReactJS = () => {
   return (
-    <Grid item xs container justify="center">
-      <IconButton
-        className={"icon"}
-        onClick={() => handleLinkClick("https://reactjs.org/")}
-        style={{ backgroundColor: "transparent" }}
-      >
-        <IconContext.Provider value={iconStyles()}>
-          <div>
-            <SiReact />
-          </div>
-        </IconContext.Provider>
-      </IconButton>
-    </Grid>
+    <IconButton
+      className={'icon'}
+      onClick={() => handleLinkClick(link)}
+      style={{ backgroundColor: 'transparent' }}
+    >
+      <IconContext.Provider value={iconStyles()}>
+        <div>{icon()}</div>
+      </IconContext.Provider>
+    </IconButton>
   );
-};
-
-const C = () => {
-  return (
-    <Grid item xs container justify="center">
-      <IconButton
-        className={"icon"}
-        onClick={() =>
-          handleLinkClick(
-            "https://docs.microsoft.com/en-us/cpp/c-language/?view=vs-2019"
-          )
-        }
-        style={{ backgroundColor: "transparent" }}
-      >
-        <IconContext.Provider value={iconStyles()}>
-          <div>
-            <SiC />
-          </div>
-        </IconContext.Provider>
-      </IconButton>
-    </Grid>
-  );
-};
-
-const cPlusPlus = () => {
-  return (
-    <Grid item xs container justify="center">
-      <IconButton
-        className={"icon"}
-        onClick={() =>
-          handleLinkClick(
-            "https://docs.microsoft.com/en-us/cpp/cpp/?view=vs-2019"
-          )
-        }
-        style={{ backgroundColor: "transparent" }}
-      >
-        <IconContext.Provider value={iconStyles()}>
-          <div>
-            <SiCplusplus />
-          </div>
-        </IconContext.Provider>
-      </IconButton>
-    </Grid>
-  );
-};
-
-const cSharp = () => {
-  return (
-    <Grid item xs container justify="center">
-      <IconButton
-        className={"icon"}
-        onClick={() =>
-          handleLinkClick("https://docs.microsoft.com/en-us/dotnet/csharp/")
-        }
-        style={{ backgroundColor: "transparent" }}
-      >
-        <IconContext.Provider value={iconStyles()}>
-          <div>
-            <SiCsharp />
-          </div>
-        </IconContext.Provider>
-      </IconButton>
-    </Grid>
-  );
-};
-
-const Python = () => {
-  return (
-    <Grid item xs container justify="center">
-      <IconButton
-        className={"icon"}
-        onClick={() => handleLinkClick("https://www.python.org/doc/")}
-        style={{ backgroundColor: "transparent" }}
-      >
-        <IconContext.Provider value={iconStyles()}>
-          <div>
-            <SiPython />
-          </div>
-        </IconContext.Provider>
-      </IconButton>
-    </Grid>
-  );
-};
-
-const MySQL = () => {
-  return (
-    <Grid item xs container justify="center">
-      <IconButton
-        className={"icon"}
-        onClick={() => handleLinkClick("https://dev.mysql.com/doc/")}
-        style={{ backgroundColor: "transparent" }}
-      >
-        <IconContext.Provider value={iconStyles()}>
-          <div>
-            <SiMysql />
-          </div>
-        </IconContext.Provider>
-      </IconButton>
-    </Grid>
-  );
-};
-
-const JS = () => {
-  return (
-    <Grid item xs container justify="center">
-      <IconButton
-        className={"icon"}
-        onClick={() =>
-          handleLinkClick(
-            "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-          )
-        }
-        style={{ backgroundColor: "transparent" }}
-      >
-        <IconContext.Provider value={iconStyles()}>
-          <div>
-            <SiJavascript />
-          </div>
-        </IconContext.Provider>
-      </IconButton>
-    </Grid>
-  );
-};
-
-const HTML5 = () => {
-  return (
-    <Grid item xs container justify="center">
-      <IconButton
-        className={"icon"}
-        onClick={() =>
-          handleLinkClick(
-            "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
-          )
-        }
-        style={{ backgroundColor: "transparent" }}
-      >
-        <IconContext.Provider value={iconStyles()}>
-          <div>
-            <SiHtml5 />
-          </div>
-        </IconContext.Provider>
-      </IconButton>
-    </Grid>
-  );
-};
-
-const CSS = () => {
-  return (
-    <Grid item xs container justify="center">
-      <IconButton
-        className={"icon"}
-        onClick={() =>
-          handleLinkClick("https://developer.mozilla.org/en-US/docs/Web/CSS/")
-        }
-        style={{ backgroundColor: "transparent" }}
-      >
-        <IconContext.Provider value={iconStyles()}>
-          <div>
-            <SiCss3 />
-          </div>
-        </IconContext.Provider>
-      </IconButton>
-    </Grid>
-  );
-};
-
-const Firebase = () => {
-  return (
-    <Grid item xs container justify="center">
-      <IconButton
-        className={"icon"}
-        onClick={() => handleLinkClick("https://firebase.google.com/")}
-        style={{ backgroundColor: "transparent" }}
-      >
-        <IconContext.Provider value={iconStyles()}>
-          <div>
-            <SiFirebase />
-          </div>
-        </IconContext.Provider>
-      </IconButton>
-    </Grid>
-  );
-};
-
-const GitKraken = () => {
-  return (
-    <Grid item xs container justify="center">
-      <IconButton
-        className={"icon"}
-        onClick={() => handleLinkClick("https://support.gitkraken.com/")}
-        style={{ backgroundColor: "transparent" }}
-      >
-        <IconContext.Provider value={iconStyles()}>
-          <div>
-            <SiGitkraken />
-          </div>
-        </IconContext.Provider>
-      </IconButton>
-    </Grid>
-  );
-};
-
-const Git = () => {
-  return (
-    <Grid item xs container justify="center">
-      <IconButton
-        className={"icon"}
-        onClick={() => handleLinkClick("https://git-scm.com/")}
-        style={{ backgroundColor: "transparent" }}
-      >
-        <IconContext.Provider value={iconStyles()}>
-          <div>
-            <SiGit />
-          </div>
-        </IconContext.Provider>
-      </IconButton>
-    </Grid>
-  );
-};
+}
 
 class Skills extends Component {
   render() {
     return (
-      <SkillsContainer id="Skills">
+      <SkillsContainer id='Skills'>
         <SectionHeader>
           <h1>Skills</h1>
         </SectionHeader>
         <Grid container spacing={8}>
-          {Kotlin()}
-          {Java()}
-          {ReactJS()}
-          {C()}
-          {cPlusPlus()}
-          {cSharp()}
-          {Python()}
-          {MySQL()}
-          {JS()}
-          {HTML5()}
-          {CSS()}
-          {Firebase()}
-          {GitKraken()}
-          {Git()}
+          {skillsData.map((skill) => {
+            return (
+              <Grid key={skill.id} item xs container justify='center'>
+                <Skill link={skill.link} icon={skill.icon} />
+              </Grid>
+            );
+          })}
         </Grid>
       </SkillsContainer>
     );
