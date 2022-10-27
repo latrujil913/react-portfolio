@@ -19,9 +19,9 @@ class About extends Component {
       <AboutContainer id="About">
         <h1>About</h1>
         <p>
-          I'm a software engineer based in Guadalupe, CA. I graduated from
-          California Polytechnic State University, San Luis Obispo with a
-          Bachelors of Science in Computer Science. Passionate about building
+          I'm a software engineer based in Guadalupe, CA. I have 
+          two years of professional experience and a demonstrated
+          history of working in the industry. Passionate about building 
           software{" "}
           <span role="img" aria-label="rocket">
             {" "}
