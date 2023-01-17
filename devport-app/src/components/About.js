@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const AboutContainer = styled.div`
@@ -13,25 +13,23 @@ const AboutContainer = styled.div`
   text-align: center;
 `;
 
-class About extends Component {
-  render() {
-    return (
-      <AboutContainer id="About">
-        <h1>About</h1>
-        <p>
-          I'm a software engineer based in Guadalupe, CA. I have 
-          two years of professional experience and a demonstrated
-          history of working in the industry. Passionate about building 
-          software{" "}
-          <span role="img" aria-label="rocket">
-            {" "}
-            🚀{" "}
-          </span>
-          problem-solving, learning, and collaborating.
-        </p>
-      </AboutContainer>
-    );
-  }
+function About(){
+  return (
+    <AboutContainer id="About">
+      <h1>About</h1>
+      <p>
+        I'm a software engineer based in Santa Barbara County, CA. I have
+        two years of professional experience and a demonstrated
+        history of working in the industry. Passionate about building 
+        software{" "}
+        <span role="img" aria-label="rocket">
+          {" "}
+          🚀{" "}
+        </span>
+        problem-solving, learning, and collaborating.
+      </p>
+    </AboutContainer>
+  );
 }
 
 export default About;
