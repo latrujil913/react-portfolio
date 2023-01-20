@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import Home from "./Home";
 import Header from "./Header";
@@ -9,16 +9,14 @@ const HeroContainer = styled.div`
   min-width: 100vw;
 `;
 
-class Hero extends Component {
-  render() {
-    return (
-      <HeroContainer>
-        <Header />
-        <HorizontalRule />
-        <Home />
-      </HeroContainer>
-    );
-  }
+function Hero (){
+  return (
+    <HeroContainer>
+      <Header />
+      <HorizontalRule />
+      <Home />
+    </HeroContainer>
+  );
 }
 
 export default Hero;

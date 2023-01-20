@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Grid, IconButton } from '@material-ui/core';
 import {
@@ -158,25 +158,23 @@ function Skill(props) {
   );
 }
 
-class Skills extends Component {
-  render() {
-    return (
-      <SkillsContainer id='Skills'>
-        <SectionHeader>
-          <h1>Skills</h1>
-        </SectionHeader>
-        <Grid container spacing={8}>
-          {skillsData.map((skill) => {
-            return (
-              <Grid key={skill.id} item xs container justify='center'>
-                <Skill link={skill.link} icon={skill.icon} />
-              </Grid>
-            );
-          })}
-        </Grid>
-      </SkillsContainer>
-    );
-  }
+function Skills (){
+  return (
+    <SkillsContainer id='Skills'>
+      <SectionHeader>
+        <h1>Skills</h1>
+      </SectionHeader>
+      <Grid container spacing={8}>
+        {skillsData.map((skill) => {
+          return (
+            <Grid key={skill.id} item xs container justify='center'>
+              <Skill link={skill.link} icon={skill.icon} />
+            </Grid>
+          );
+        })}
+      </Grid>
+    </SkillsContainer>
+  );
 }
 
 export default Skills;

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 // NOTE: margin: top right bottom left
@@ -24,10 +24,8 @@ const HeaderRule = styled.hr`
   animation-timing-function: linear;
 `;
 
-class HorizontalRule extends Component {
-  render() {
-    return <HeaderRule />;
-  }
+function HorizontalRule (){
+  return <HeaderRule />;
 }
 
 export default HorizontalRule;

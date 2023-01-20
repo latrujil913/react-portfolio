@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import FadeIn from "./animations/FadeIn";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -47,44 +47,42 @@ const handleMailToClick = () => {
   window.location.replace("mailto:ltluistrujillo25@gmail.com");
 };
 
-class Home extends Component {
-  render() {
-    return (
-      <FadeIn duration=".75" delay="1" trnslFrmY="10" trnslToY="0">
-        <HomeContainer>
-          <h1>Luis Trujillo</h1>
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter.pauseFor(2500).typeString("Software Engineer").start();
-            }}
-          />
-        </HomeContainer>
-        <IconBar>
-          <IconButton
-            onClick={handleLinkedInClick}
-            className={"icon"}
-            style={{ backgroundColor: "transparent" }}
-          >
-            <LinkedInIcon className={"icon"} style={IconStyle()} />
-          </IconButton>
-          <IconButton
-            onClick={handleGitHubClick}
-            className={"icon"}
-            style={{ backgroundColor: "transparent" }}
-          >
-            <GitHubIcon className={"icon"} style={IconStyle()} />
-          </IconButton>
-          <IconButton
-            onClick={handleMailToClick}
-            className={"icon"}
-            style={{ backgroundColor: "transparent" }}
-          >
-            <EmailIcon className={"icon"} style={IconStyle()} />
-          </IconButton>
-        </IconBar>
-      </FadeIn>
-    );
-  }
+function Home (){
+  return (
+    <FadeIn duration=".75" delay="1" trnslFrmY="10" trnslToY="0">
+      <HomeContainer>
+        <h1>Luis Trujillo</h1>
+        <Typewriter
+          onInit={(typewriter) => {
+            typewriter.pauseFor(2500).typeString("Software Engineer").start();
+          }}
+        />
+      </HomeContainer>
+      <IconBar>
+        <IconButton
+          onClick={handleLinkedInClick}
+          className={"icon"}
+          style={{ backgroundColor: "transparent" }}
+        >
+          <LinkedInIcon className={"icon"} style={IconStyle()} />
+        </IconButton>
+        <IconButton
+          onClick={handleGitHubClick}
+          className={"icon"}
+          style={{ backgroundColor: "transparent" }}
+        >
+          <GitHubIcon className={"icon"} style={IconStyle()} />
+        </IconButton>
+        <IconButton
+          onClick={handleMailToClick}
+          className={"icon"}
+          style={{ backgroundColor: "transparent" }}
+        >
+          <EmailIcon className={"icon"} style={IconStyle()} />
+        </IconButton>
+      </IconBar>
+    </FadeIn>
+  );
 }
 
 export default Home;

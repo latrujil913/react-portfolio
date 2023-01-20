@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -154,21 +154,19 @@ const singleProject = (project) => {
   );
 };
 
-class Project extends Component {
-  render() {
-    return (
-      <ProjectContainer id="Project">
-        <SectionHeader>
-          <h1>Projects</h1>
-        </SectionHeader>
-        <ThemeProvider theme={theme}>
-          <Grid container spacing={5}>
-            {projectData.map((project) => singleProject(project))}
-          </Grid>
-        </ThemeProvider>
-      </ProjectContainer>
-    );
-  }
+function Project (){
+  return (
+    <ProjectContainer id="Project">
+      <SectionHeader>
+        <h1>Projects</h1>
+      </SectionHeader>
+      <ThemeProvider theme={theme}>
+        <Grid container spacing={5}>
+          {projectData.map((project) => singleProject(project))}
+        </Grid>
+      </ThemeProvider>
+    </ProjectContainer>
+  );
 }
 
 export default Project;
