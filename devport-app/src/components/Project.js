@@ -29,7 +29,6 @@ const ProjectContainer = styled.div`
 `;
 
 const ProjectBody = styled.div`
-  // font-size: calc(5px + 1.4vmin);
   text-align: left;
   min-height: 10vh;
   min-width: 250px;
