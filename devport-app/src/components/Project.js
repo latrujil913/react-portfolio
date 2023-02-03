@@ -102,12 +102,12 @@ const projectData = [
     id: 3,
     link: "https://github.com/latrujil913/react-portfolio",
     title: "Portfolio",
-    subheader: "React.js - Personal Portfolio",
+    subheader: "React.js - Portfolio",
     alt: "Portfolio",
     img: require("../assets/images/projects/portfolio.png"),
     hint: "Go to my portfolio's repository",
     description:
-      "Personal website built with the ReactJS framework and popular libraries such as Styled Components and Material-UI.",
+      "Personal website built with ReactJS, Styled Components and Material-UI.",
   },
   {
     id: 4,
