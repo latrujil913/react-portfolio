@@ -168,35 +168,35 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function SingleProject (props) {
-  const {project} = props;
+function SingleProject(props) {
+  const { project } = props;
   const mediaStyles = useCoverCardMediaStyles({ bgPosition: 'top' });
   const styles = useStyles();
   return (
     <Grid key={project.id} item xs container justify="center">
       <CardLink href={project.link}>
         <Card className={styles.card}>
-            <CardMedia
-              component="img"
-              alt={project.alt}
-              image={project.img}
-              title={project.hint}
-              classes={mediaStyles}
-            />
-            <Box py={3} px={2} className={styles.content}>
-              <Info  useStyles={useGalaxyInfoStyles}>
+          <CardMedia
+            component="img"
+            alt={project.alt}
+            image={project.img}
+            title={project.hint}
+            classes={mediaStyles}
+          />
+          <Box py={3} px={2} className={styles.content}>
+            <Info useStyles={useGalaxyInfoStyles}>
               <InfoSubtitle>{project.subheader}</InfoSubtitle>
               <InfoTitle>{project.title}</InfoTitle>
-              <InfoCaption>{project.description}</InfoCaption> 
-              </Info>
-            </Box>
+              <InfoCaption>{project.description}</InfoCaption>
+            </Info>
+          </Box>
         </Card>
       </CardLink>
     </Grid>
   );
 };
 
-function Project (){
+function Project() {
   return (
     <ProjectContainer id="Project">
       <SectionHeader>
