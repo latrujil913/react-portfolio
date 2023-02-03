@@ -154,8 +154,10 @@ const useStyles = makeStyles(() => ({
     zIndex: 2,
     bottom: 0,
     width: '90%',
-
   },
+  font: {
+    fontFamily: "Lucida Console, Monaco, monospace"
+  }
 }));
 
 function SingleProject(props) {
@@ -175,9 +177,9 @@ function SingleProject(props) {
           />
           <Box py={3} px={2} className={styles.content}>
             <Info useStyles={useGalaxyInfoStyles}>
-              <InfoSubtitle>{project.subheader}</InfoSubtitle>
-              <InfoTitle>{project.title}</InfoTitle>
-              <InfoCaption>{project.description}</InfoCaption>
+              <InfoSubtitle className={styles.font}>{project.subheader}</InfoSubtitle>
+              <InfoTitle className={styles.font}>{project.title}</InfoTitle>
+              <InfoCaption className={styles.font}>{project.description}</InfoCaption>
             </Info>
           </Box>
         </Card>
