@@ -106,7 +106,7 @@ const projectData = [
     img: require("../assets/images/projects/portfolio.png"),
     hint: "Go to my portfolio's repository",
     description:
-      "Personal website built with ReactJS, Styled Components and Material-UI.",
+      "Personal website built with ReactJS, Netlify, Styled Components and Material-UI.",
   },
   {
     id: 4,
