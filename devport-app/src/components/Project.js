@@ -1,13 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import { createMuiTheme, ThemeProvider, makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import CardHeader from "@material-ui/core/CardHeader";
-import Typography from "@material-ui/core/Typography";
 import { Box } from '@material-ui/core';
 import {
   Info,
@@ -35,12 +31,6 @@ const ProjectContainer = styled.div`
     align-items: center;
     flex-direction: column;
   }
-`;
-
-const ProjectBody = styled.div`
-  text-align: left;
-  min-height: 10vh;
-  min-width: 250px;
 `;
 
 const CardLink = styled.a`
