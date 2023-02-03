@@ -4,10 +4,19 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import { createMuiTheme, ThemeProvider, makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import CardHeader from "@material-ui/core/CardHeader";
 import Typography from "@material-ui/core/Typography";
+import { Box } from '@material-ui/core';
+import {
+  Info,
+  InfoCaption,
+  InfoSubtitle,
+  InfoTitle,
+} from '@mui-treasury/components/info';
+import { useGalaxyInfoStyles } from '@mui-treasury/styles/info/galaxy';
+import { useCoverCardMediaStyles } from '@mui-treasury/styles/cardMedia/cover';
 
 const ProjectContainer = styled.div`
   min-height: 100vh;
@@ -120,33 +129,67 @@ const projectData = [
     description:
       "Calm On! a fun and interactive experience to educate youths (ages 6-11) to learn about mental health techniques.",
   },
+  {
+    id: 5,
+    link: "https://www.replikasoftware.com/",
+    title: "Replika Software",
+    subheader: "React Native - Mobile Application",
+    alt: "Replika Software",
+    img: require("../assets/images/projects/replika.png"),
+    hint: "Go to Replika Software's website",
+    description:
+      "Platform for brands to activate their network of social sellers with a turnkey tool to inspire sales online.",
+  },
 ];
 
-const singleProject = (project) => {
+const useStyles = makeStyles(() => ({
+  card: {
+    boxShadow: 'none',
+    position: 'relative',
+    minWidth: 350,
+    minHeight: 410,
+    '&:after': {
+      content: '""',
+      display: 'block',
+      position: 'absolute',
+      width: '100%',
+      height: '85%',
+      bottom: 0,
+      zIndex: 1,
+      background: 'linear-gradient(to top, #000 25%, rgba(0,0,0,0))',
+    },
+  },
+  content: {
+    position: 'absolute',
+    zIndex: 2,
+    bottom: 0,
+    width: '90%',
+
+  },
+}));
+
+function SingleProject (props) {
+  const {project} = props;
+  const mediaStyles = useCoverCardMediaStyles({ bgPosition: 'top' });
+  const styles = useStyles();
   return (
     <Grid key={project.id} item xs container justify="center">
       <CardLink href={project.link}>
-        <Card variant="outlined" style={{ maxWidth: 500, minWidth: 250 }}>
-          <CardActionArea>
-            <CardHeader
-              variant="body1"
-              title={project.title}
-              subheader={project.subheader}
-            />
+        <Card className={styles.card}>
             <CardMedia
-              conponent="img"
+              component="img"
               alt={project.alt}
-              height="140"
               image={project.img}
               title={project.hint}
-              style={{ height: 0, paddingTop: "100%" }}
+              classes={mediaStyles}
             />
-            <CardContent>
-              <ProjectBody>
-                <Typography>{project.description}</Typography>
-              </ProjectBody>
-            </CardContent>
-          </CardActionArea>
+            <Box py={3} px={2} className={styles.content}>
+              <Info  useStyles={useGalaxyInfoStyles}>
+              <InfoSubtitle>{project.subheader}</InfoSubtitle>
+              <InfoTitle>{project.title}</InfoTitle>
+              <InfoCaption>{project.description}</InfoCaption> 
+              </Info>
+            </Box>
         </Card>
       </CardLink>
     </Grid>
@@ -157,11 +200,11 @@ function Project (){
   return (
     <ProjectContainer id="Project">
       <SectionHeader>
-        <h1>Projects</h1>
+        <h1>Works</h1>
       </SectionHeader>
       <ThemeProvider theme={theme}>
         <Grid container spacing={5}>
-          {projectData.map((project) => singleProject(project))}
+          {projectData.map((project) => <SingleProject project={project} />)}
         </Grid>
       </ThemeProvider>
     </ProjectContainer>

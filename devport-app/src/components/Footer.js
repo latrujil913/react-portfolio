@@ -48,7 +48,7 @@ class Footer extends Component {
           </IconButton>
         </Link>
         <VersionContainer>
-          <div>2023 - v1.01 by Luis Trujillo</div>
+          <div>2023 - v1.02 by Luis Trujillo</div>
         </VersionContainer>
       </FooterContainer>
     );
