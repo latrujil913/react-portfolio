@@ -85,7 +85,7 @@ const projectData = [
     img: require("../assets/images/projects/bucketquest.png"),
     hint: "Go to BucketQuest repository",
     description:
-      "An android application that enables users to find locations of activities that are worthy of putting on a bucket list.",
+      "Android application that enables users to find locations of activities that are worthy of putting on a bucket list.",
   },
   {
     id: 2,
@@ -118,7 +118,7 @@ const projectData = [
     img: require("../assets/images/projects/calmon.png"),
     hint: "Go to Calm On!'s repository",
     description:
-      "Calm On! aims to create a fun and interactive experience that can educate youths (ages 6-11) to learn more about mental health techniques.",
+      "Calm On! a fun and interactive experience to educate youths (ages 6-11) to learn about mental health techniques.",
   },
 ];
 
